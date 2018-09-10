@@ -1,0 +1,5 @@
+products.page:
+  title: Demo Link
+  description: 'This is a demo link'
+  parent: system.admin_structure
+  route_name: products.products_form
