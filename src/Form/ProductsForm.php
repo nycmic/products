@@ -51,12 +51,12 @@ class ProductsForm extends FormBase {
    */
   public function prepareTable(&$form){
     $header_table = array(
-      'id'=>    t('SrNo'),
+      'id'=>    t('No'),
       'name' => t('Name'),
-      'phone' => t('MobileNumber'),
-      'exp_date' => t('Age'),
-      'email' => t('Gender'),
-//      'category' => t('Gender'),
+      'phone' => t('Phone'),
+      'exp_date' => t('Expired at'),
+      'email' => t('Email'),
+      'category' => t('category'),
       'opt' => t('operations'),
     );
 
@@ -79,9 +79,10 @@ class ProductsForm extends FormBase {
         'data' => [
           'id' =>$data->id,
           'name' => $data->name,
-          'mobilenumber' => $data->mobilenumber,
-          'age' => $data->age,
-          'gender' => $data->gender,
+          'phone' => $data->phone,
+          'email' => $data->email,
+          'exp_date' => $data->exp_date,
+          'category' => $data->category,
           'link' => $this->getLinkGenerator()->generate('Delete', $delete),
         ],
         'id' => 'row_'.$data->id
@@ -208,9 +209,10 @@ class ProductsForm extends FormBase {
       'data' => [
         'id' =>$id,
         'name' => $field['name'],
-        'mobilenumber' => $field['mobilenumber'],
-        'age' => $field['age'],
-        'gender' => $field['gender'],
+        'phone' => $field['phone'],
+        'email' => $field['email'],
+        'exp_date' => $field['exp_date'],
+        'category' => $field['category'],
         \Drupal::l('Delete', $delete),
       ],
       'id' => 'row_'.$id
