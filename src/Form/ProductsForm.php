@@ -54,8 +54,8 @@ class ProductsForm extends FormBase {
       'id'=>    t('No'),
       'name' => t('Name'),
       'phone' => t('Phone'),
-      'exp_date' => t('Expired at'),
       'email' => t('Email'),
+      'exp_date' => t('Expired at'),
       'category' => t('category'),
       'opt' => t('operations'),
     );
